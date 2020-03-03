@@ -92,6 +92,19 @@ git reset							(erase commits from current branch)
 git reset <<SHA number>>			(default as --mixed flag)
 git reset --hard HEAD^				(--mixed => erased file into Working Directory, --soft => erased file into staging index, --hard => erased file into trash)
 
+git reset --hard HEAD~1				(erased last commit and move HEAD back to 1 commit before)
+git reset --soft HEAD~1				(erased file into staging index)
+git reset HEAD^						(same as reset soft, remove commit locally)
+
+In the scenairos of you reset hard the local and try to push to remote. You will face issue because Local Head is pointing one head later than remote one.
+If you are sure that you want to delete those commits from remote, use force push.
+
+git push origin HEAD+				(force push the new HEAD commit)
+
+
+OR, if you want to keep the commit in local. but want to delete from remote.
+git push origin +HEAD^:<<name of your branch, most likely 'master'>>
+
 =======================================================
 
 ******** Git Remote ********
