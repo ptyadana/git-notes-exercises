@@ -151,3 +151,15 @@ use s or squash – to combine this commit's changes into the previous commit (t
 use f or fixup – to combine this commit's change into the previous one but drop the commit message
 use x or exec – to run a shell command
 use d or drop – to delete the commit
+
+==========================================================
+
+***  Change Remote Repository in Git Hub ***
+
+1) Change the repo in git hut to the name you want. Then get the new repo git address.
+
+2) In Local, set the new repo git address.
+
+git remote set-url origin <<someuser/newprojectname.git>>
+
+3) Change the local folder name same as repo name, if you want.
