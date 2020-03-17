@@ -68,6 +68,8 @@ git branch _D <<name>>				(force deletion)
 
 git checkout <<name>>				(switch to that branch or master)
 git checkout -b <<name>>			(create new branch and switch to that new branch)
+git checkout -b <<name>> origin/<<branchname>>			(checkout from that branch of origin and create as new branch in local)
+
 
 
 git merge <name-of- other branch-to-merge-in>
