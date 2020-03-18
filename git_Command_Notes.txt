@@ -21,6 +21,15 @@ git config --global user.username "Git Hub Username"
 
 =================================
 
+*** to get help of specific command ***
+
+git <<command name>> --help
+git push --help					: help about push command and how to use it
+
+
+
+=================================
+
 git clone <<URL>>
 
 git status
@@ -57,7 +66,8 @@ git tag -a <<v1.0>> <<SHA number>>	(add tag to specific SHA number commit)
 git tag -d <<v1.0>>					(delete tag) (same as git tag --delete <<v1.0>>)
 
 
-git branch							(show all branches)
+git branch							(show all branches that are already checkout)
+git branch --all					(show local and remote branches)
 git branch <<name>>					(create new branch)
 git branch <<name>> <<SHA number>>	(create new branch pointing to that specific SHA commit, git branch alt-sidebar-loc 42a69f)
 
@@ -178,3 +188,11 @@ use d or drop – to delete the commit
 git remote set-url origin <<someuser/newprojectname.git>>
 
 3) Change the local folder name same as repo name, if you want.
+
+=========================================================
+
+*** how to remove from git already added folder ***
+
+git rm -r --cached .ipynb_checkpoints/
+git commit -m 'Remove the now ignored directory ".ipynb_checkpoints"'
+git push origin master
